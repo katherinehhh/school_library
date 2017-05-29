@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>中南林业科技大学图书馆管理</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">中南林业科技大学图书管理后台</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 cl-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">图书编辑</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                           <!--  <div class="form-group">
+                                <label for="bookid">图书id</label>
+                                <input type="text" class="form-control" id="bookid" placeholder="bookid">
+                            </div> -->
+                            <div class="form-group">
+                                <label for="booktype">图书类别</label>
+                                <input type="text" class="form-control" id="booktype" placeholder="教材教辅/热门书籍/语言文学/哲学理论/计算机">
+                            </div>
+                           <div class="form-group">
+                                <label for="bookimg">图书图片</label>
+                                <input type="text" class="form-control" id="bookimg" placeholder="请输入图片路径">
+                            </div>
+                            <div class="form-group">
+                                <label for="booknum">剩余数目</label>
+                                <input type="text" class="form-control" id="booknum" placeholder="请输入图书剩余数目">
+                            </div>
+                            <div class="form-group">
+                                <label for="bookname">图书名称</label>
+                                <input type="text" class="form-control" id="bookname" placeholder="请输入图书名称">
+                            </div>
+                           
+                            <button class="btn btn-primary" id="btnsubmit">提交添加</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">图书列表</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table" id="booktable">
+                            <thead>
+                                <tr>
+                                 <th>id</th>
+                                    <th>类别</th>
+                                    <th>图片</th>
+                                    <th>数目</th>
+                                    <th>图书名称</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="list">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="pagecount"></div>
+        </div>
+    </div>
+    <!-- model delete -->
+    <div class="modal fade" id="deleModal" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">警告</h4>
+                </div>
+                <div class="modal-body">
+                    删除无法恢复
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        取消</button>
+                        <button type="button" class="btn btn-primary" id="confirmDelete">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- model update -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">编辑</h4>
+                </div>
+                <div class="modal-body">
+                   <form>
+                            <!-- <div class="form-group">
+                                <label for="bookid">图书id</label>
+                                <input type="text" class="form-control" id="ubookid" placeholder="bookid">
+                            </div> -->
+                            <div class="form-group">
+                                <label for="booktype">图书类别</label>
+                                <input type="text" class="form-control" id="ubooktype" placeholder="booktype">
+                            </div>
+                     
+                            <div class="form-group">
+                                <label for="bookimg">图书图片</label>
+                                <input type="text" class="form-control" id="ubookimg" placeholder="请输入图片路径">
+                            </div>
+                            <div class="form-group">
+                                <label for="booknum">剩余数目</label>
+                                <input type="date" class="form-control" id="ubooknum">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="ubookname">图书名称</label>
+                                <input type="text" class="form-control" id="ubookname">
+                            </div>
+                           
+                        </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        取消</button>
+                        <button type="button" class="btn btn-primary" id="confirmUpdate">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

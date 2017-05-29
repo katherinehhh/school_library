@@ -1,0 +1,212 @@
+html{
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	font-size: 62.5%;
+
+}
+
+body, div, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, iframe, input, textarea, select, label, article, aside, footer, header, menu, nav, section, time, audio, video{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: Microsoft Yahei;
+}
+
+/*header部分的样式*/
+header .top .login{
+	height: 20px;
+	width: 100%;
+	background-color:#565656; 
+		
+}
+header .top .login a{
+	color: #f4f4e4;
+	text-decoration: none;
+}
+header .top .fl{
+ float: left;
+ display: inline;
+ position: absolute;
+ margin-left: 158px;
+ 
+}
+header .top .fr{
+	float: right;
+	display: inline;
+
+  margin-right: 200px;
+
+}
+/*背景图片*/
+header .top .banner{
+position:relative;
+width: 100%;
+background: white;
+padding-left:200px; 
+}
+
+header .banner  img{
+	width: 564px;
+	height: 90px;
+	display: inline-block;
+	position: relative;
+	
+}
+/*开放时间*/
+header .banner .time{
+	position: relative;
+	display: inline-block;
+   font-size: 14px;
+   line-height: 40px;
+   margin-left: 40px;
+   top: -10px;
+   color: #333333;
+
+}
+
+
+/*搜索框部分的样式*/
+.search{
+	width: 100%;
+    height: 155px;
+    margin-top: 15px;
+    background: #36886a;
+
+}
+.search .warp{
+	background :url(../images/search_back.png) 110px 19px no-repeat;
+	height: 100%;
+	width: 100%;
+	margin: 20px;
+}
+.search .warp .taber{
+	display: block;
+	position: absolute;
+	left: 500px;
+	margin-top: 15px;
+	font-size: 16px;
+    width: 635px;
+    height: 140px;
+    margin-top: 15px;
+	
+}
+.search .warp .taber .tab a{
+	color: #ffffff;
+	display: inline-block;
+	text-decoration: none;
+	width: 92px;
+    height: 44px;
+    text-align: center;
+    line-height: 37px;
+    font-size: 1.4rem;
+
+
+}
+.search .warp .taber .tab .active{
+background: url(../images/active.jpg) no-repeat;
+}
+
+.search .warp .taber .ck .tit .text .txt{
+    width: 515px;
+    height: 32px;
+    border: 0;
+    color: #b2b2b2;
+    padding-left: 27px;
+    font-size: 1.4rem;
+    background: url(../images/search_logo.jpg) #fff 7px 8px no-repeat;
+}
+.search .warp .taber .ck .tit .submit{
+    width: 91px;
+    height: 39px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    border: 0;
+    border-bottom: 3px solid #307b5f;
+    background: #b2cdc3;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-left: 17px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: -35px;
+    float: right;
+    position: relative;
+    
+   
+}
+.search .warp .taber .ck .con span {
+    color: #F7F7F7;
+    font-size: 14px;
+    position: absolute;
+    margin-top: 25px;
+}
+
+/*图书展示$分页条部分的样式*/
+#list {
+        width: 1000px;
+        height: 1000px;
+        margin: 50px auto 2px auto;
+        position: relative
+    }
+    
+    #list ul li {
+        float: left;
+        width: 185px;
+        height: 190px;
+        margin-top: 30px;
+        list-style: none;
+        margin-left: 10px;
+    }
+    
+    #list ul li a {
+        display: block;
+        width: 170px;
+        position: absolute;
+        height: 175px;
+    }
+    
+    #list ul li img {
+        width: 160px;
+        height: 168px
+    }
+    
+    #list ul li p {
+       position: relative;
+       font-size: 14px;
+       text-align: center;
+       margin-top: 170px;
+    }
+     #list ul li p i{
+      font-size: 17px;
+      color: #67F1F8;
+     }
+    #pagecount {
+        width: 500px;
+        margin: 10px auto 2px auto;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    #pagecount span {
+        margin: 4px;
+        font-size: 14px
+    }
+    
+    #list ul li#loading {
+        width: 120px;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #d3d3d3;
+        position: absolute;
+        top: 35%;
+        left: 42%;
+        text-align: center;
+        background: #f7f7f7 url(../images/loading.gif) no-repeat 8px 8px;
+        -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+    }
